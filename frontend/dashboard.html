@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Procurement AI</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">P</div>
+
+            <div>
+                <h2>Procurement AI</h2>
+                <span>Enterprise Platform</span>
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html" class="nav-item active">
+                🏠 Dashboard
+            </a>
+
+            <a href="/static/requests.html" class="nav-item">
+                📋 Purchase Requests
+            </a>
+
+            <a href="/static/suppliers.html" class="nav-item">
+                🏢 Suppliers
+            </a>
+
+            <a href="/static/quotations.html" class="nav-item">
+                📑 Quotations
+            </a>
+
+            <a href="/static/purchase_orders.html" class="nav-item">
+                📦 Purchase Orders
+            </a>
+
+            <a href="/static/invoices.html" class="nav-item">
+                🧾 Invoices
+            </a>
+
+            <a href="/static/matching.html" class="nav-item">
+                🔄 3-Way Matching
+            </a>
+
+            <a href="/static/exceptions.html" class="nav-item">
+                ⚠ Exceptions
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Procurement Dashboard</h1>
+                <p>AI-powered procurement operations</p>
+            </div>
+
+            <div class="user">
+                <div class="avatar">A</div>
+
+                <div>
+                    <strong>Admin User</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- STATISTICS -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Total Requests</span>
+                <strong id="totalRequests">-</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Pending Requests</span>
+                <strong id="pendingRequests">-</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Active POs</span>
+                <strong id="activePOs">-</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Open Exceptions</span>
+                <strong id="openExceptions">-</strong>
+            </div>
+
+        </section>
+
+
+        <!-- AI ALERT -->
+
+        <section class="ai-panel">
+
+            <div class="ai-header">
+
+                <div>
+                    <h2>🤖 AI Procurement Insights</h2>
+
+                    <p>
+                        Automated analysis of procurement activity
+                    </p>
+                </div>
+
+                <span class="ai-status">
+                    AI READY
+                </span>
+
+            </div>
+
+            <div id="aiInsights">
+
+                <div class="insight">
+                    <strong>Checking procurement data...</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RECENT REQUESTS -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Recent Purchase Requests</h2>
+
+                    <p>
+                        Latest procurement requests
+                    </p>
+                </div>
+
+                <a href="requests.html">
+                    View all →
+                </a>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Request</th>
+                            <th>Requester</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Budget</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="requestsTable">
+
+                        <tr>
+                            <td colspan="6">
+                                Loading...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="/static/js/app.js"></script>
+
+</body>
+
+</html>

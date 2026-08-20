@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quotations - Procurement AI</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/ai.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">P</div>
+
+            <div>
+                <h2>Procurement AI</h2>
+                <span>Enterprise Platform</span>
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="/" class="nav-item">
+                🏠 Dashboard
+            </a>
+
+            <a href="/static/requests.html" class="nav-item">
+                📋 Purchase Requests
+            </a>
+
+            <a href="/static/suppliers.html" class="nav-item">
+                🏢 Suppliers
+            </a>
+
+            <a href="/static/quotations.html" class="nav-item active">
+                📑 Quotations
+            </a>
+
+            <a href="/static/purchase_orders.html" class="nav-item">
+                📦 Purchase Orders
+            </a>
+
+            <a href="/static/invoices.html" class="nav-item">
+                🧾 Invoices
+            </a>
+
+            <a href="/static/matching.html" class="nav-item">
+                🔄 3-Way Matching
+            </a>
+
+            <a href="/static/exceptions.html" class="nav-item">
+                ⚠ Exceptions
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Supplier Quotations</h1>
+
+                <p>
+                    Compare supplier offers for purchase requests
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- QUOTATION SUMMARY -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Total Quotations</span>
+                <strong id="totalQuotes">-</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Requests With Quotes</span>
+                <strong id="requestsWithQuotes">-</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Lowest Quote</span>
+                <strong id="lowestQuote">-</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Average Delivery</span>
+                <strong id="averageDelivery">-</strong>
+            </div>
+
+        </section>
+
+
+        <!-- QUOTATIONS TABLE -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Quotation Comparison</h2>
+
+                    <p>
+                        Supplier quotations received for procurement requests
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Quote</th>
+                            <th>Request</th>
+                            <th>Supplier</th>
+                            <th>Product</th>
+                            <th>Unit Price</th>
+                            <th>Total</th>
+                            <th>Delivery</th>
+                            <th>Warranty</th>
+                            <th>Status</th>
+                            <th>AI Analysis</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="quoteTable">
+
+                        <tr>
+                            <td colspan="10">
+                                Loading quotations...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- AI ANALYSIS PREVIEW -->
+
+        <section class="ai-panel" id="aiAnalysisPanel">
+
+         <div class="ai-header">
+
+        <div class="ai-title">
+
+            <div class="ai-icon">
+                🤖
+            </div>
+
+            <div>
+                <h2>Procurement AI Decision</h2>
+
+                <p>
+                    AI-powered supplier evaluation and recommendation
+                </p>
+            </div>
+
+        </div>
+
+        <span class="ai-status">
+            AI READY
+        </span>
+
+    </div>
+
+
+    <div class="ai-controls">
+
+        <div class="ai-select-group">
+
+            <label for="requestSelector">
+                Purchase Request
+            </label>
+
+            <select id="requestSelector">
+
+                <option value="">
+                    Select a purchase request
+                </option>
+
+            </select>
+
+        </div>
+
+        <button
+    id="generateQuotesButton"
+    class="secondary-button">
+    📑 Generate Supplier Quotes
+     </button>
+        <button
+            id="analyzeButton"
+            class="ai-analyze-button"
+        >
+            <span>🤖</span>
+            Analyze with AI
+        </button>
+
+    </div>
+
+
+    <div id="aiResult" class="ai-result">
+
+        <div class="ai-empty-state">
+
+            <div class="empty-icon">
+                ✨
+            </div>
+
+            <h3>Ready to analyze</h3>
+
+            <p>
+                Select a purchase request to evaluate
+                suppliers, pricing, delivery, warranty,
+                inventory and procurement policies.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+</div>
+
+
+<script src="/static/js/quotations.js"></script>
+
+</body>
+
+</html>

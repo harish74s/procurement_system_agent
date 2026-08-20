@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Suppliers - Procurement AI</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">P</div>
+
+            <div>
+                <h2>Procurement AI</h2>
+                <span>Enterprise Platform</span>
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="/" class="nav-item">
+                🏠 Dashboard
+            </a>
+
+            <a href="/static/requests.html" class="nav-item">
+                📋 Purchase Requests
+            </a>
+
+            <a href="/static/suppliers.html" class="nav-item active">
+                🏢 Suppliers
+            </a>
+
+            <a href="/static/quotations.html" class="nav-item">
+                📑 Quotations
+            </a>
+
+            <a href="/static/purchase_orders.html" class="nav-item">
+                📦 Purchase Orders
+            </a>
+
+            <a href="/static/invoices.html" class="nav-item">
+                🧾 Invoices
+            </a>
+
+            <a href="/static/matching.html" class="nav-item">
+                🔄 3-Way Matching
+            </a>
+
+            <a href="/static/exceptions.html" class="nav-item">
+                ⚠ Exceptions
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Suppliers</h1>
+
+                <p>
+                    Manage approved and registered suppliers
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- SUPPLIER SUMMARY -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Total Suppliers</span>
+                <strong id="totalSuppliers">-</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Approved Suppliers</span>
+                <strong id="approvedSuppliers">-</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Pending Suppliers</span>
+                <strong id="pendingSuppliers">-</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Average Rating</span>
+                <strong id="averageRating">-</strong>
+            </div>
+
+        </section>
+
+
+        <!-- SUPPLIER TABLE -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Supplier Directory</h2>
+
+                    <p>
+                        Supplier information from the procurement database
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Supplier</th>
+                            <th>Code</th>
+                            <th>Rating</th>
+                            <th>Reliability</th>
+                            <th>Status</th>
+                            <th>Contact</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="supplierTable">
+
+                        <tr>
+                            <td colspan="6">
+                                Loading suppliers...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="/static/js/suppliers.js"></script>
+
+</body>
+
+</html>

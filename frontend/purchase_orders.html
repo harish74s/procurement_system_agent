@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Purchase Orders - Procurement AI</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">P</div>
+
+            <div>
+                <h2>Procurement AI</h2>
+                <span>Enterprise Platform</span>
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="/" class="nav-item">
+                🏠 Dashboard
+            </a>
+
+            <a href="/static/requests.html" class="nav-item">
+                📋 Purchase Requests
+            </a>
+
+            <a href="/static/suppliers.html" class="nav-item">
+                🏢 Suppliers
+            </a>
+
+            <a href="/static/quotations.html" class="nav-item">
+                📑 Quotations
+            </a>
+
+            <a href="/static/purchase_orders.html" class="nav-item active">
+                📦 Purchase Orders
+            </a>
+
+            <a href="/static/invoices.html" class="nav-item">
+                🧾 Invoices
+            </a>
+
+            <a href="/static/matching.html" class="nav-item">
+                🔄 3-Way Matching
+            </a>
+
+            <a href="/static/exceptions.html" class="nav-item">
+                ⚠ Exceptions
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Purchase Orders</h1>
+
+                <p>
+                    Manage approved supplier purchase orders
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- SUMMARY -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <span>Total POs</span>
+
+                <strong id="totalPOs">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>Draft</span>
+
+                <strong id="draftPOs">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>Approved / Ordered</span>
+
+                <strong id="activePOs">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>Total PO Value</span>
+
+                <strong id="totalPOValue">
+                    -
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- PO TABLE -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Purchase Order Register</h2>
+
+                    <p>
+                        Purchase orders generated from supplier quotations
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>PO Number</th>
+
+                            <th>Request</th>
+
+                            <th>Supplier</th>
+
+                            <th>Quantity</th>
+
+                            <th>Total Amount</th>
+
+                            <th>Order Date</th>
+
+                            <th>Expected Delivery</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="poTable">
+
+                        <tr>
+
+                            <td colspan="8">
+                                Loading purchase orders...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="/static/js/purchase_orders.js"></script>
+
+</body>
+
+</html>
